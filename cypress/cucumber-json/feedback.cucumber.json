@@ -1,0 +1,103 @@
+[
+  {
+    "description": "    As a valid user\n    I want to send a valid feedback",
+    "keyword": "Feature",
+    "name": "Send feedback",
+    "line": 1,
+    "id": "send-feedback",
+    "tags": [],
+    "uri": "feedback.feature",
+    "elements": [
+      {
+        "id": "send-feedback;valid-feedback-with-different-users",
+        "keyword": "Scenario",
+        "line": 27,
+        "name": "Valid feedback with different users",
+        "tags": [
+          {
+            "name": "@focus",
+            "line": 20
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I open the fedback page",
+            "result": {
+              "status": "passed",
+              "duration": 1908000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I fill the fields with valid data \"test\" \"test@test.com\" \"valid subject\" \"message\"",
+            "result": {
+              "status": "passed",
+              "duration": 1745000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I should see the succesfull message",
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "send-feedback;valid-feedback-with-different-users",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Valid feedback with different users",
+        "tags": [
+          {
+            "name": "@focus",
+            "line": 20
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I open the fedback page",
+            "result": {
+              "status": "passed",
+              "duration": 302000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I fill the fields with valid data \"test2\" \"test2@test.com\" \"valid subject 2 \" \"message 2\"",
+            "result": {
+              "status": "passed",
+              "duration": 1457000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I should see the succesfull message",
+            "result": {
+              "status": "passed",
+              "duration": 17000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

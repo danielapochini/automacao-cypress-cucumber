@@ -25,6 +25,7 @@ module.exports = (on, config) => {
 		...browserify.defaultOptions,
 		typescript: resolve.sync('typescript', { baseDir: config.projectRoot }),
 	}
-	require('cypress-mochawesome-reporter/plugin')(on)
 	on('file:preprocessor', cucumber(options))
+
+	//require('cypress-mochawesome-reporter/plugin')(on)
 }
