@@ -18,6 +18,7 @@
 	},
 	"devDependencies": {
 		"@types/cypress-cucumber-preprocessor": "^4.0.1",
+		"cucumber-html-reporter": "^5.5.0",
 		"cypress": "^9.5.3",
 		"cypress-cucumber-preprocessor": "^4.3.1"
 	},
