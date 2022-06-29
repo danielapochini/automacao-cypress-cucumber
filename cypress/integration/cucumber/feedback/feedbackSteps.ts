@@ -19,6 +19,12 @@ When('I fill the fields with valid data', datatable => {
 	})
 })
 
+When(
+	'I fill the fields with valid data {string} {string} {string} {string}',
+	(name, email, subject, message) => {
+		cy.submitFeedback(name, email, subject, message)
+	}
+)
 Then('I should see the succesfull message', () => {
 	cy.get('#feedback-title').should('have.text', 'Feedback')
 })
