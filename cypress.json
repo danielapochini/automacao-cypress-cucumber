@@ -6,5 +6,6 @@
 	"waitForAnimations": true,
 	"failOnStatusCode": false,
 	"video": false,
-	"reporter": "cypress-mochawesome-reporter"
+	"reporter": "cypress-mochawesome-reporter",
+	"testFiles": "**/*.feature"
 }

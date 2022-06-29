@@ -16,6 +16,15 @@
  * @type {Cypress.PluginConfig}
  */
 // eslint-disable-next-line no-unused-vars
+const browserify = require('@cypress/browserify-preprocessor')
+const cucumber = require('cypress-cucumber-preprocessor').default
+const resolve = require('resolve')
+
 module.exports = (on, config) => {
-  require('cypress-mochawesome-reporter/plugin')(on)
+	const options = {
+		...browserify.defaultOptions,
+		typescript: resolve.sync('typescript', { baseDir: config.projectRoot }),
+	}
+	require('cypress-mochawesome-reporter/plugin')(on)
+	on('file:preprocessor', cucumber(options))
 }
