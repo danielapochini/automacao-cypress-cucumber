@@ -7,7 +7,14 @@
 		"cy:run": "cypress run --browser chrome",
 		"postcy:run": "node ./cypress/support/multiple-cucumber-html-reporter.ts"
 	},
-	"author": "",
+	"author": "Daniela Pochini",
+	"keywords": [
+		"playwright",
+		"QA",
+		"automation",
+		"cucumber",
+		"BDD"
+	],
 	"license": "ISC",
 	"description": "",
 	"dependencies": {
