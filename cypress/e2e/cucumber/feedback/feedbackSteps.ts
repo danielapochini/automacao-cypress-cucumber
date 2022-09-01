@@ -1,4 +1,4 @@
-import { Given, Then, When } from 'cypress-cucumber-preprocessor/steps'
+import { Given, Then, When, DataTable } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('I open the fedback page', () => {
 	cy.visitFeedbackPage()
@@ -8,8 +8,8 @@ When('I submit the form', () => {
 	cy.submitFeedback('Test', 'test@test.com', 'test test', 'message')
 })
 
-When('I fill the fields with valid data', datatable => {
-	datatable.hashes().forEach(element => {
+When('I fill the fields with valid data', (datatable : DataTable)=> {
+	datatable.hashes().forEach((element : any) => {
 		cy.submitFeedback(
 			element.name,
 			element.email,
@@ -21,7 +21,7 @@ When('I fill the fields with valid data', datatable => {
 
 When(
 	'I fill the fields with valid data {string} {string} {string} {string}',
-	(name, email, subject, message) => {
+	(name:string, email:string, subject:string, message:string) => {
 		cy.submitFeedback(name, email, subject, message)
 	}
 )
