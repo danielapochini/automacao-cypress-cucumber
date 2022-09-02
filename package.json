@@ -8,9 +8,9 @@
 		"cy:run": "cypress run",
 		"cy:run:chrome": "cypress run --browser chrome",
 		"cy:run:firefox": "cypress run --browser firefox",
-		"clean:reports": "rm -R -f cypress/reports", 
+		"clean:reports": "rimraf cypress/reports/*",
 		"pretest": "npm run clean:reports",
-		"test": "npm run cy:run", 
+		"test": "npm run cy:run",
 		"chrome:test": "npm-run-all pretest cy:run:chrome",
 		"firefox:test": "npm-run-all pretest cy:run:firefox"
 	},
@@ -35,15 +35,16 @@
 		"@cypress/browserify-preprocessor": "^3.0.2",
 		"cypress": "^10.6.0",
 		"multiple-cucumber-html-reporter": "^1.21.4",
-		"npm-run-all": "^4.1.5"
+		"npm-run-all": "^4.1.5",
+		"rimraf": "^3.0.2"
 	},
 	"cypress-cucumber-preprocessor": {
 		"html": {
-		  "enabled": true,
-		  "output": "cypress/reports/cucumber-report.html"
+			"enabled": true,
+			"output": "cypress/reports/cucumber-report.html"
 		},
 		"messages": {
 			"enabled": false
-		  }
+		}
 	}
 }
