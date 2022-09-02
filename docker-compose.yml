@@ -1,0 +1,20 @@
+version: '3'
+services: 
+
+  e2e-electron:
+    image: 'cy-docker-cucumber'
+    command: 'test'
+    volumes:
+      - ./cypress/reports:/cypress-docker/cypress/reports
+ 
+  e2e-chrome:
+    image: 'cy-docker-cucumber'
+    command: 'chrome:test'
+    volumes:
+      - ./cypress/reports:/cypress-docker/cypress/reports
+ 
+  e2e-firefox:
+    image: 'cy-docker-cucumber'
+    command: 'firefox:test' 
+    volumes:
+      - ./cypress/reports:/cypress-docker/cypress/reports
